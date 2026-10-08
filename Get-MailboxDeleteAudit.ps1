@@ -52,18 +52,18 @@
     Renvoie les événements dans le pipeline (pour un traitement ultérieur).
 
 .EXAMPLE
-    .\Get-MailboxDeletionAudit.ps1 -Mailbox barbes@crous-paris.fr `
-        -StartDate "2026-10-05" -EndDate "2026-10-09" -Subject "désinsectisation"
+    .\Get-MailboxDeletionAudit.ps1 -Mailbox gerald@geniaut.fr `
+        -StartDate "2026-10-05" -EndDate "2026-10-09" -Subject "CERTS ALERTS"
 
     Retrace le parcours d'un mail précis et donne la vue d'ensemble de la boîte.
 
 .EXAMPLE
-    .\Get-MailboxDeletionAudit.ps1 -Mailbox barbes@crous-paris.fr -ExportCsv .\barbes.csv
+    .\Get-MailboxDeletionAudit.ps1 -Mailbox gerald@geniaut.fr -ExportCsv .\gerald@geniaut.fr.csv
 
     Vue d'ensemble des 7 derniers jours, avec export CSV du détail.
 
 .EXAMPLE
-    $ev = .\Get-MailboxDeletionAudit.ps1 -Mailbox barbes@crous-paris.fr -PassThru
+    $ev = .\Get-MailboxDeletionAudit.ps1 -Mailbox gerald@geniaut.fr -PassThru
     $ev | Where-Object Utilisateur -like "prenom.nom*" | Format-Table Date, Operation, Sujet
 
 .NOTES
